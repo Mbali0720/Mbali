@@ -1,1 +1,499 @@
+/* GreenFuture SA - Main Stylesheet */
+/* Student: Mbali Maluka */
+/* Module: WEDE5020 */
+/* Part 2: CSS Styling and Responsive Design */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1B1B1B;
+    background-color: #FFFFFF;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #2E7D32;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.8rem; margin-top: 1.5rem; }
+h3 { font-size: 1.4rem; }
+p { margin-bottom: 1rem; }
+
+a {
+    text-decoration: none;
+    color: #2E7D32;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #FFC107;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    background-color: #FFFFFF;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    max-height: 80px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    font-weight: 600;
+    padding: 0.5rem 0;
+}
+
+nav ul li a:hover {
+    color: #FFC107;
+    border-bottom: 2px solid #FFC107;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.cta-button, .submit-btn {
+    display: inline-block;
+    background-color: #FFC107;
+    color: #2E7D32;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover, .submit-btn:hover {
+    background-color: #2E7D32;
+    color: #FFC107;
+}
+
+.hero {
+    position: relative;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    background: rgba(0,0,0,0.7);
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 450px;
+}
+
+.hero-text h1 {
+    color: #FFC107;
+}
+
+.hero-text p {
+    color: white;
+}
+
+.impact-stats {
+    background-color: #F5F5F5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.stat {
+    flex: 1;
+    min-width: 120px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFC107;
+}
+
+.stat-title {
+    font-weight: 700;
+    color: #2E7D32;
+}
+
+.programme-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 250px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.card h3, .card p {
+    padding: 0.5rem 1rem;
+}
+
+.card .cta-button {
+    margin: 0 1rem 1rem 1rem;
+    display: inline-block;
+}
+
+.cta-section {
+    background-color: #2E7D32;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.cta-section h2 {
+    color: #FFC107;
+    margin-top: 0;
+}
+
+.cta-section p {
+    color: white;
+}
+
+.cta-section .cta-button {
+    background-color: #FFC107;
+    color: #2E7D32;
+}
+
+.cta-section .cta-button:hover {
+    background-color: white;
+    color: #2E7D32;
+}
+
+.forms-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.form-card {
+    flex: 1;
+    background-color: #F5F5F5;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form-header h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    color: #2E7D32;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #FFC107;
+    outline: none;
+}
+
+.benefits-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.benefit {
+    flex: 1;
+    background-color: #F5F5F5;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.locations-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.location-card {
+    flex: 1;
+    background-color: #F5F5F5;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.contact-methods {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.contact-method {
+    flex: 1;
+    background-color: #F5F5F5;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.mission-vision {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.mission, .vision {
+    flex: 1;
+    background-color: #F5F5F5;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.values-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.value-item {
+    flex: 1;
+    background-color: #F5F5F5;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.team-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.team-member {
+    flex: 1;
+    text-align: center;
+    background-color: #F5F5F5;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.programme-detail {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #EEE;
+}
+
+.programme-detail:last-child {
+    border-bottom: none;
+}
+
+.programme-image, .programme-info {
+    flex: 1;
+}
+
+.programme-tag {
+    color: #FFC107;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+footer {
+    background-color: #2E7D32;
+    color: white;
+    padding: 2rem 5%;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content h4 {
+    color: #FFC107;
+}
+
+.footer-content ul {
+    list-style: none;
+}
+
+.footer-content a {
+    color: white;
+}
+
+.footer-content a:hover {
+    color: #FFC107;
+}
+
+.footer-about, .footer-links, .footer-contact {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    .hero-text {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: 1rem;
+        background: #2E7D32;
+        max-width: 100%;
+    }
+    
+    .stats-container, .programme-cards, .forms-container,
+    .benefits-container, .locations-container, .contact-methods,
+    .mission-vision, .values-container, .team-container,
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .programme-detail, .reverse {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.4rem; }
+    
+    .hero-text {
+        padding: 1rem;
+    }
+    
+    .impact-stats, .cta-section {
+        padding: 1rem;
+    }
+    
+    .cta-button, .submit-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
+    
+    .card, .form-card, .location-card, .benefit,
+    .contact-method, .team-member, .value-item {
+        min-width: auto;
+    }
+}
