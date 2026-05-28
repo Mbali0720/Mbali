@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenFuture SA | Volunteer or Sponsor</title>
+    <meta name="description" content="Volunteer your time, sponsor a learner, or partner with GreenFuture SA. Complete our enquiry form to start making a difference in South African townships.">
+    <meta name="keywords" content="volunteer climate action South Africa, sponsor environmental education, donate to youth NPO">
+    
+    <!-- Google Fonts - Montserrat for headings, Roboto for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- ================= HEADER SECTION ================= -->
+    <!-- Contains the GreenFuture SA logo and main navigation menu linking to all 5 pages -->
     <header>
         <div class="logo">
             <img src="images/logo.png" alt="GreenFuture SA Logo" width="160" height="100">
@@ -22,79 +32,195 @@
         </nav>
     </header>
 
+    <!-- ================= MAIN CONTENT ================= -->
     <main>
-        <section class="page-hero">
+        <!-- ================= PAGE HEADER SECTION ================= -->
+        <!-- Introduction to the enquiry page -->
+        <section class="page-header">
             <h1>Volunteer or Sponsor</h1>
-            <p>Join us in growing a greener future for South Africa's townships.</p>
+            <p class="section-intro">Join us in growing a greener future for South Africa's townships. Complete the form below and a member of our team will respond within 3 business days.</p>
         </section>
 
-        <section class="enquiry-form">
-            <h2>Tell us how you'd like to help</h2>
+        <!-- ================= TWO FORMS SECTION (SIDE BY SIDE) ================= -->
+        <!-- Matches wireframe layout with two columns: Volunteer Application and Sponsorship Enquiry -->
+        <section class="forms-container">
             
-            <!-- Enquiry Form -->
-            <form action="#" method="POST" id="enquiryForm">
+            <!-- FORM 1: VOLUNTEER APPLICATION - Left column -->
+            <div class="form-card">
+                <div class="form-header">
+                    <h2>Volunteer Application</h2>
+                    <p>Join our team of dedicated volunteers helping to bridge the digital divide.</p>
+                </div>
                 
-                <div class="form-group">
-                    <label for="fullname">Full Name *</label>
-                    <input type="text" id="fullname" name="fullname" required placeholder="e.g., Thabo Nkosi">
+                <form action="#" method="post" class="enquiry-form">
+                    <!-- Full Name field -->
+                    <div class="form-group">
+                        <label for="volunteer-name">Full Name *</label>
+                        <input type="text" id="volunteer-name" name="volunteer-name" required minlength="2">
+                    </div>
+                    
+                    <!-- Email field -->
+                    <div class="form-group">
+                        <label for="volunteer-email">Email Address *</label>
+                        <input type="email" id="volunteer-email" name="volunteer-email" required>
+                    </div>
+                    
+                    <!-- Phone number field -->
+                    <div class="form-group">
+                        <label for="volunteer-phone">Phone Number *</label>
+                        <input type="tel" id="volunteer-phone" name="volunteer-phone" required placeholder="082 123 4567">
+                    </div>
+                    
+                    <!-- Age field (must be 18 or older) -->
+                    <div class="form-group">
+                        <label for="volunteer-age">Age *</label>
+                        <input type="number" id="volunteer-age" name="volunteer-age" required min="18" max="99">
+                    </div>
+                    
+                    <!-- Skills textarea -->
+                    <div class="form-group">
+                        <label for="volunteer-skills">Skills and Qualifications</label>
+                        <textarea id="volunteer-skills" name="volunteer-skills" rows="3" placeholder="e.g., teaching experience, gardening skills, administration, event planning..."></textarea>
+                    </div>
+                    
+                    <!-- Availability dropdown -->
+                    <div class="form-group">
+                        <label for="volunteer-availability">Availability *</label>
+                        <select id="volunteer-availability" name="volunteer-availability" required>
+                            <option value="">Select your availability</option>
+                            <option value="weekdays">Weekdays only</option>
+                            <option value="weekends">Weekends only</option>
+                            <option value="both">Both weekdays and weekends</option>
+                            <option value="evenings">Evenings only</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Motivation textarea -->
+                    <div class="form-group">
+                        <label for="volunteer-motivation">Why do you want to volunteer with us? *</label>
+                        <textarea id="volunteer-motivation" name="volunteer-motivation" rows="4" required minlength="50" placeholder="Please tell us about your motivation to volunteer..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit Volunteer Application</button>
+                </form>
+            </div>
+            
+            <!-- FORM 2: SPONSORSHIP ENQUIRY - Right column -->
+            <div class="form-card">
+                <div class="form-header">
+                    <h2>Sponsorship Enquiry</h2>
+                    <p>Support our mission through corporate or individual sponsorship.</p>
                 </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required placeholder="thabo@example.com">
-                </div>
-
-                <div class="form-group">
-                    <label for="cellphone">Cellphone Number</label>
-                    <input type="tel" id="cellphone" name="cellphone" placeholder="e.g., 0712345678">
-                </div>
-
-                <div class="form-group">
-                    <label for="enquiryType">I want to... *</label>
-                    <select id="enquiryType" name="enquiryType" required>
-                        <option value="">-- Select one --</option>
-                        <option value="volunteer">Volunteer my time</option>
-                        <option value="sponsor">Become a corporate sponsor</option>
-                        <option value="donate">Make a donation</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Your Message *</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Tell us why you're interested in GreenFuture SA..."></textarea>
-                </div>
-
-                <div class="form-group">
-                    <button type="submit" class="submit-btn">Submit Enquiry →</button>
-                </div>
-            </form>
-
-            <p class="form-note">* Required fields. We'll respond within 3 working days.</p>
+                
+                <form action="#" method="post" class="enquiry-form">
+                    <!-- Organisation name field -->
+                    <div class="form-group">
+                        <label for="sponsor-org">Organisation Name *</label>
+                        <input type="text" id="sponsor-org" name="sponsor-org" required>
+                    </div>
+                    
+                    <!-- Contact person name field -->
+                    <div class="form-group">
+                        <label for="sponsor-name">Contact Person Name *</label>
+                        <input type="text" id="sponsor-name" name="sponsor-name" required>
+                    </div>
+                    
+                    <!-- Email field -->
+                    <div class="form-group">
+                        <label for="sponsor-email">Email Address *</label>
+                        <input type="email" id="sponsor-email" name="sponsor-email" required>
+                    </div>
+                    
+                    <!-- Phone number field -->
+                    <div class="form-group">
+                        <label for="sponsor-phone">Phone Number *</label>
+                        <input type="tel" id="sponsor-phone" name="sponsor-phone" required>
+                    </div>
+                    
+                    <!-- Sponsorship type dropdown -->
+                    <div class="form-group">
+                        <label for="sponsor-type">Sponsorship Type *</label>
+                        <select id="sponsor-type" name="sponsor-type" required>
+                            <option value="">Select sponsorship type</option>
+                            <option value="corporate">Corporate Sponsorship</option>
+                            <option value="individual">Individual Donation</option>
+                            <option value="in-kind">In-Kind Donation (equipment, trees)</option>
+                            <option value="other">Other / Partnership Enquiry</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Enquiry details textarea -->
+                    <div class="form-group">
+                        <label for="sponsor-message">Enquiry Details *</label>
+                        <textarea id="sponsor-message" name="sponsor-message" rows="5" required minlength="30" placeholder="Please provide details about your sponsorship interest..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit Sponsorship Enquiry</button>
+                </form>
+            </div>
+            
         </section>
+
+        <!-- ================= WHY GET INVOLVED SECTION ================= -->
+        <!-- Explains the benefits of volunteering or sponsoring -->
+        <section class="why-involved">
+            <h2>Why Get Involved?</h2>
+            <div class="benefits-container">
+                <div class="benefit">
+                    <h3>Measurable Impact</h3>
+                    <p>Your contribution directly helps youth gain climate action skills and helps plant trees in townships.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Community Connection</h3>
+                    <p>Join a network of passionate volunteers, educators, and sponsors working together for a common goal.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Recognition</h3>
+                    <p>Corporate sponsors receive recognition on our website and social media. Volunteers receive certificates and references.</p>
+                </div>
+                <div class="benefit">
+                    <h3>Tax Benefits</h3>
+                    <p>GreenFuture SA is a registered NPO. Donations are tax-deductible for South African taxpayers.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- ================= FOOTER SECTION ================= -->
+    <!-- Contains organisation information, quick links, and social media accounts -->
     <footer>
         <div class="footer-content">
             <div class="footer-about">
                 <h4>GreenFuture SA</h4>
-                <p>Empowering township youth for climate action.</p>
+                <p>Empowering township youth for climate action in South Africa since 2021.</p>
+                <div class="social-links">
+                    <a href="#">Facebook</a> | 
+                    <a href="#">Instagram</a> | 
+                    <a href="#">TikTok</a>
+                </div>
             </div>
             <div class="footer-links">
+                <h4>Quick Links</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="programmes.html">Programmes</a></li>
                     <li><a href="enquiry.html">Enquiry</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <p>Instagram | Facebook | TikTok</p>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Email: info@greenfuturesa.org.za</li>
+                    <li>Phone: 031 123 4567</li>
+                    <li>Location: Durban, South Africa</li>
+                </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 GreenFuture SA. All rights reserved.</p>
+            <p>&copy; 2026 GreenFuture SA. All rights reserved. Registered NPO.</p>
         </div>
     </footer>
 
