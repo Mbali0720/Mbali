@@ -88,7 +88,7 @@ GreenFuture SA is a fictional non-profit organisation that empowers youth in Sou
 
 ### Deployment
 - Website deployed on GitHub Pages
-- Live URL: https://Mbali0720.github.io/GreenFutureSA-Website/
+- Live URL: https://mbali0720.github.io/Mbali/
 
 ## Sitemap
 
