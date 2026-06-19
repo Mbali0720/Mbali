@@ -4,7 +4,7 @@
 - **Name:** Mbali Maluka
 - **Student Number:** ST10516518
 - **Module:** WEDE5020 - Web Development (Introduction)
-- **Assessment:** POE Part 1 and Part 2
+- **Assessment:** POE Part 1, Part 2 and Part 3
 
 ## Project Overview
 GreenFuture SA is a fictional non-profit organisation that empowers youth in South African townships to take climate action through tree planting, recycling workshops, and youth climate camps.
@@ -21,7 +21,10 @@ GreenFuture SA is a fictional non-profit organisation that empowers youth in Sou
 - About Us with team and mission/vision
 - Programmes page detailing three initiatives
 - Enquiry form for volunteers and sponsors (two forms side by side)
-- Contact page with address, two locations, map placeholders, and contact form
+- Contact page with address, two locations, interactive maps, and contact form
+- JavaScript form validation for all forms
+- Image lightbox gallery
+- Programme search filter
 
 ## Timeline and Milestones
 - Part 1 (Week 3): Complete HTML structure, 5 pages, navigation
@@ -64,10 +67,34 @@ GreenFuture SA is a fictional non-profit organisation that empowers youth in Sou
 | Tablet | Stacked layout, vertical navigation, larger touch targets |
 | Mobile | Single column, full-width buttons, smaller text |
 
+## Part 3 Details - JavaScript, SEO, and Deployment
+
+### JavaScript Features Implemented
+- Form validation for volunteer application form (name, email, phone, age, availability, motivation)
+- Form validation for sponsorship enquiry form (organisation, contact, email, phone, type, message)
+- Form validation for contact form (name, email, subject, message)
+- Image lightbox gallery (click any programme image to enlarge)
+- Interactive Leaflet maps for Durban and Soweto locations with markers and popups
+- Programme search filter (type to filter programmes)
+
+### SEO Features Implemented
+- Unique meta titles for all 5 pages
+- Unique meta descriptions for all 5 pages
+- Meta keywords for all 5 pages
+- Meta author for all 5 pages
+- robots.txt file
+- sitemap.xml file
+- Descriptive alt text for all images
+
+### Deployment
+- Website deployed on GitHub Pages
+- Live URL: https://Mbali0720.github.io/GreenFutureSA-Website/
+
 ## Sitemap
 
 ### Visual Sitemap
 ![Website sitemap screenshot](images/Sitemap.png)
+
 ### Sitemap Explanation
 The website consists of 5 pages arranged in a flat hierarchy:
 
@@ -75,33 +102,47 @@ The website consists of 5 pages arranged in a flat hierarchy:
 
 2. **About Us (about.html)** – Provides background information about GreenFuture SA, including the organisation's history, mission statement, vision statement, four core values with descriptions, and three team member profiles with roles.
 
-3. **Programmes (programmes.html)** – Details the three core programmes: Tree Planting Initiative, Recycling and Upcycling Workshops, and Youth Climate Camps. Each programme includes a description, key features as bullet points, and a call-to-action button linking to the enquiry page.
+3. **Programmes (programmes.html)** – Details the three core programmes: Tree Planting Initiative, Recycling and Upcycling Workshops, and Youth Climate Camps. Each programme includes a description, key features as bullet points, and a call-to-action button linking to the enquiry page. Includes a search filter to find programmes.
 
-4. **Enquiry (enquiry.html)** – Contains two forms side by side: one for volunteer applications and one for sponsorship enquiries. Each form includes required fields (name, email, phone, message) and a submit button. This page also includes a "Why Get Involved" section with four benefit boxes.
+4. **Enquiry (enquiry.html)** – Contains two forms side by side: one for volunteer applications and one for sponsorship enquiries. Each form includes required fields (name, email, phone, message) and a submit button with JavaScript validation. This page also includes a "Why Get Involved" section with four benefit boxes.
 
-5. **Contact (contact.html)** – Displays office address, phone numbers, email addresses, office hours, and a contact form. As required by the rubric, this page shows two locations (Soweto Hub and Tembisa Hub) with map placeholders for each.
+5. **Contact (contact.html)** – Displays office address, phone numbers, email addresses, office hours, and a contact form. As required by the rubric, this page shows two locations (Durban Head Office and Soweto Community Hub) with interactive Leaflet maps for each.
 
 **Navigation:** All pages are linked through the navigation menu in the header (Home, About Us, Programmes, Enquiry, Contact) and again in the footer. Users can move freely between any pages without using the browser back button.
 
 ## File Structure
+GreenFutureSA-Website/
+├── index.html
+├── about.html
+├── programmes.html
+├── enquiry.html
+├── contact.html
+├── README.md
+├── robots.txt
+├── sitemap.xml
+├── css/
+│ └── style.css
+├── js/
+│ └── main.js
+└── images/
+├── logo.png
+├── hero.jpg
+├── planting.jpg
+├── recycling.jpg
+├── camp.jpg
+├── team.jpg
+├── Thandi Khumalo.jpg
+├── Lungelo Dlamini.jpg
+├── Priya Naidoo.jpg
+├── map-durban.jpg
+├── map-soweto.jpg
+├── Sitemap.png
+├── screenshot-desktop.png
+├── screenshot-tablet.png
+└── screenshot-mobile.png
 
-- index.html
-- about.html
-- programmes.html
-- enquiry.html
-- contact.html
-- README.md
-- css/
-  - style.css
-- js/
-  - script.js
-- images/
-  - logo.png
-  - hero.jpg
-  - screenshot-desktop.png
-  - screenshot-tablet.png
-  - screenshot-mobile.png
-  
+text
+
 ## Changelog
 
 ### 2026-05-20 – Project setup
@@ -160,6 +201,18 @@ The website consists of 5 pages arranged in a flat hierarchy:
 - Linked CSS to all 5 HTML pages
 - Updated references with CSS resources
 
+### 2026-06-19 – Part 3: JavaScript, SEO, and Deployment
+- Added SEO meta tags (title, description, keywords, author) to all 5 HTML pages
+- Added JavaScript link (js/main.js) to all 5 HTML pages
+- Created main.js with form validation for volunteer, sponsor, and contact forms
+- Added image lightbox gallery functionality
+- Added interactive Leaflet maps for Durban and Soweto locations
+- Added programme search filter to programmes.html
+- Added robots.txt file for search engine crawling
+- Added sitemap.xml file for search engine indexing
+- Updated README with Part 3 details and live URL
+- Deployed website to GitHub Pages
+
 ## References
 
 ### Part 1 References
@@ -179,3 +232,10 @@ Mozilla Developer Network, 2026. *CSS: Cascading Style Sheets*. [online] Availab
 W3Schools, 2026. *CSS Tutorial*. [online] Available at: <https://www.w3schools.com/css/> [Accessed 27 May 2026].
 
 CSS-Tricks, 2026. *A Complete Guide to Flexbox*. [online] Available at: <https://css-tricks.com/snippets/css/a-guide-to-flexbox/> [Accessed 27 May 2026].
+
+### Part 3 References
+Leaflet, 2026. *Leaflet - an open-source JavaScript library for interactive maps*. [online] Available at: <https://leafletjs.com/> [Accessed 19 June 2026].
+
+OpenStreetMap, 2026. *OpenStreetMap contributors*. [online] Available at: <https://www.openstreetmap.org/copyright> [Accessed 19 June 2026].
+
+Mozilla Developer Network, 2026. *JavaScript: Form validation*. [online] Available at: <https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation> [Accessed 19 June 2026].
