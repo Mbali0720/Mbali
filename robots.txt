@@ -5,4 +5,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://Mbali0720.github.io/Mbali/sitemap.xml
+Sitemap: https://mbali0720.github.io/Mbali/sitemap.xml
