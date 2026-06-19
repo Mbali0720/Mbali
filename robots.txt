@@ -5,4 +5,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://Mbali0720s.github.io/GreenFutureSA-Website/sitemap.xml
+Sitemap: https://Mbali0720.github.io/Mbali/sitemap.xml
